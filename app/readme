@@ -1,0 +1,28 @@
+This project is for dagger hilt dependency injection
+
+what is needed,
+- dagger hilt dependency
+- retrofit dependency
+
+Two injection types
+- constructor
+- field
+
+Step one
+-  needs to create 'AppModule' where we define all the dependencies
+
+AppModule annotations - Read the 'AppModule' class in di package
+---------------------
+@Module - To identify this is the class defining dependencies
+@InstallIn(SingletonComponent::class) - All the dependencies define in this class live long as App lives
+
+dagger hilt annotation cheat codes
+https://developer.android.com/static/images/training/dependency-injection/hilt-cheatsheet.png
+
+dagger hilt tutorial
+https://www.youtube.com/watch?v=bbMsuI2p1DQ&ab_channel=PhilippLackner
+
+If need application context to be an dependency
+- Create application class
+- Annotated as '@HiltAndroidApp'
+Check how 'MyRepositoryImpl' and 'AppModule' 'provideMyRepository' use context as dependency
